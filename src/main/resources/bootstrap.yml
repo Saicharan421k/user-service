@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: user-service # The name it will use to register with Eureka and ask the config server for its file.
+  cloud:
+    config:
+      uri: http://localhost:8888 # When testing locally, point to a local config server. We'll override this in Docker.spring.application.name=user-service
