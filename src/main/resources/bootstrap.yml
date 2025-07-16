@@ -1,10 +1,11 @@
 spring:
   application:
-    name: user-service # The name it will use to register with Eureka and ask the config server for its file.
+    # This defines the name of our service.
+    name: user-service
   cloud:
     config:
-      uri: http://localhost:8888 # When testing locally, point to a local config server. We'll override this in Docker.spring.application.name=user-service
+      # This is the address of the config server for local testing.
+      uri: http://localhost:8888
   config:
-    # This is the new, mandatory line. It explicitly tells the service
-    # to import its configuration from a Config Server.
+    # This is the mandatory line to enable the config client.
     import: "configserver:"
