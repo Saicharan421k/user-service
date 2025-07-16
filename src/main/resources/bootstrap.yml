@@ -1,11 +1,8 @@
 spring:
   application:
-    # This defines the name of our service.
     name: user-service
   cloud:
     config:
-      # This is the address of the config server for local testing.
       uri: http://localhost:8888
   config:
-    # This is the mandatory line to enable the config client.
     import: "configserver:"
